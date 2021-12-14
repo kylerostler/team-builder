@@ -31,17 +31,10 @@ const submitForm = () => {
   } else {
     setTeamMembers(teamMembers.concat(newMember));
     setFormValues(initialFormValues);
+    setError("")
   }
-  setError("")
-  console.log(teamMembers)
 }
 
-// if (!newMember.username || !newMember.email || !newMember.role) {
-//   setError("all fields are required")}
-//   else {
-
-//   }
-// }
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -58,7 +51,7 @@ const submitForm = () => {
           Learn React
         </a>
       </header> */}
-      <h1>Form App</h1>
+      <h1>My Team</h1>
       <h2>{error}</h2>
       <TeamForm 
         values={formValues}
